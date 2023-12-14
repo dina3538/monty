@@ -78,7 +78,7 @@ void c_func(op_func func, char *op, char *val, int ln, int ft)
 			flag = -1;
 		}
 		if (val == NULL)
-			_error(5, ln);
+			fprintf(stderr, "L%d: usage: push integer\n", ln);
 		for (i = 0; val[i] != '\0'; i++)
 		{
 			if (isdigit(val[i]) == 0)
